@@ -3,7 +3,7 @@
 int main() {
     int a;
     scanf("%d",&a);
-    if (a=12||a<=2){
+    if (a==12||a<=2){
         printf("Winter");
     }
     else if (a>=9){
