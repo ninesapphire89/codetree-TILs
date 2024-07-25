@@ -9,5 +9,10 @@ int main() {
             printf("%d ",i);
         }
     }
+    if (c=='D'){
+        for(int x=n;x>=1;x--){
+            printf("%d ",x);
+        }
+    }
     return 0;
 }
