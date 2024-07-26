@@ -2,16 +2,12 @@
 
 int main() {
     int n;
-    int fy=0;
+    int cnt=0;
     scanf("%d",&n);
-    for(int i=1;i<=n;i++){
-        if(i%4==0){
-            fy++;
-        }
-        if(i%100==0&&(n%400)!=0){
-            fy--;
-        }
+    for(int i = 1; i <= n; i++) {
+		if((i % 4 == 0 && i % 100 != 0) || i % 400 == 0)
+			cnt++;
     }
-    printf("%d",fy);
+    printf("%d",cnt);
     return 0;
 }
