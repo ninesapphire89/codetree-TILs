@@ -3,10 +3,10 @@
 int main() {
     int a,b,c;
     scanf("%d %d %d",&a,&b,&c);
-    bool of = false;
+    bool of = true;
     for (int i=a;i<=b;i++){
-        if (c%i!=0){
-            of = true;
+        if (i%c==0){
+            of = false;
         }
     }
     if(of==true){
