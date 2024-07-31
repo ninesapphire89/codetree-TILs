@@ -5,7 +5,7 @@ int main() {
     scanf("%d %d %d",&a,&b,&c);
     bool of = false;
     for (int i=a;i<=b;i++){
-        if (c%i==0){
+        if (c%i!=0){
             of = true;
         }
     }
