@@ -6,7 +6,7 @@ int main() {
     scanf("%d",&n);
     while(1){
         if (n != 2){
-            n-=2;
+            n/=2;
             d++;
         }
         else {
