@@ -10,10 +10,10 @@ int main() {
         }
     }
     if ( satisfied == true){
-        printf("Yes");
+        printf("YES");
     }
     else {
-        printf("No");
+        printf("NO");
     }
     return 0;
 }
