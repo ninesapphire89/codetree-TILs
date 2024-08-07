@@ -12,7 +12,7 @@ int main() {
                 cnt++;
             }
             else{
-                printf("%d ",(i+2)*n-cnt+1);
+                printf("%d ",3*i*n-cnt+1);
                 cnt++;
             }
         }
