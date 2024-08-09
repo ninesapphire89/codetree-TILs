@@ -8,7 +8,7 @@ int main() {
         for(int j=1;j<=i;j++){
             printf("%c",x);
             x++;
-            if(x=='Z')
+            if(x=='Z'+1)
                 x='A';
         }
         printf("\n");
