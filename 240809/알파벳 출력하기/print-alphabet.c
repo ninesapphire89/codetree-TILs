@@ -8,6 +8,8 @@ int main() {
         for(int j=1;j<=i;j++){
             printf("%c",x);
             x++;
+            if(x=='Z')
+                x='A';
         }
         printf("\n");
     }
