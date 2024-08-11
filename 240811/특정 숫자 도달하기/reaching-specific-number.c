@@ -1,19 +1,28 @@
 #include <stdio.h>
 
 int main() {
-    int arr[9];
-    int sum=0,avg_1=0;
-    double avg;
-    for(int i=0;i<10;i++){
-        scanf("%d ",&arr[i]);
-        if(arr[i]>=250)
-            break;
-        sum+=arr[i];
-            avg_1++;
-        
-
+    int arr[10];
+    int sum = 0;
+    int cnt = 0;
+	
+	// 10개의 정수를 입력받습니다.
+    for(int i = 0; i < 10; i++) {
+        scanf("%d", &arr[i]);
     }
-    avg=(double)sum/avg_1;
-    printf("%d %.1lf",sum,avg);
+
+	// 10개의 정수 중 250 이상의 수가 나올 때 까지의 수의 합계와 개수를 구합니다.
+	for(int i = 0; i < 10; i++) {
+        if(arr[i] >= 250) 
+			break;
+        sum += arr[i];
+        cnt++;
+    }
+	
+    // 평균을 구합니다.
+    double avg = (double)sum / cnt;
+
+    // 출력
+    printf("%d %.1lf", sum, avg);
+
     return 0;
 }
