@@ -15,6 +15,6 @@ int main() {
         }
     }
     avg=(double)sum/avg_1;
-    printf("%d %.1f",sum,avg);
+    printf("%d %.1lf",sum,avg);
     return 0;
 }
