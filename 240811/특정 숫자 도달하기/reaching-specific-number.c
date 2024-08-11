@@ -5,7 +5,7 @@ int main() {
     int sum=0,avg_1=0;
     double avg;
     for(int i=0;i<10;i++){
-        scanf("%d",&arr[i]);
+        scanf("%d ",&arr[i]);
         if(arr[i]<250){
             sum+=arr[i];
             avg_1++;
