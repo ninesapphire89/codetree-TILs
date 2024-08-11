@@ -6,13 +6,12 @@ int main() {
     double avg;
     for(int i=0;i<10;i++){
         scanf("%d ",&arr[i]);
-        if(arr[i]<250){
-            sum+=arr[i];
-            avg_1++;
-        }
-        else{
+        if(arr[i]>=250)
             break;
-        }
+        sum+=arr[i];
+            avg_1++;
+        
+
     }
     avg=(double)sum/avg_1;
     printf("%d %.1lf",sum,avg);
