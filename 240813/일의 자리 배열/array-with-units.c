@@ -6,7 +6,7 @@ int main() {
     printf("%d %d ",arr[0],arr[1]);
     for(int i=2;i<10;i++){
         arr[i]=arr[i-1]+arr[i-2];
-        if(arr[i]>10){
+        if(arr[i]>=10){
             printf("%d ",arr[i]%10);
         }
         else{
