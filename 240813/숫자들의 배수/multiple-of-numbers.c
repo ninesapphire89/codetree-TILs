@@ -5,7 +5,7 @@ int main() {
     int cnt=0;
     scanf("%d",&n);
     for(int i=0;i<100;i++){
-        arr[i]=(i+1)*4;
+        arr[i]=(i+1)*n;
         if(arr[i]%5==0){
             cnt++;
         }
