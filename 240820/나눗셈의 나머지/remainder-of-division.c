@@ -6,10 +6,12 @@ int main() {
     int sum=0;
     int a,b;
     scanf("%d %d",&a,&b);
-    while(a<=1){
+    for(int i=0;i<100;i++){
         type=a%b;
-        a=a/b;
         c_arr[type]++;
+        a/=b;
+        if(a<=1)
+            break;
     }
     for(int i=0;i<10;i++){
         sum+=c_arr[i] * c_arr[i];
