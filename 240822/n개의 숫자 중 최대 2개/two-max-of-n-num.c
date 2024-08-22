@@ -14,8 +14,8 @@ int main() {
     int n1=INT_MIN,n2=INT_MIN;
 
     for(int i=0;i<n;i++){
-        if(arr[i]>n2){
-            if(arr[i]>n1){
+        if(arr[i]>=n2){
+            if(arr[i]>=n1){
                 n1=arr[i];
             }
             else{
