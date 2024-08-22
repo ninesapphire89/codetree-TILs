@@ -2,27 +2,39 @@
 #include <limits.h>
 
 int main() {
-    int n;
+    int A[100], n, max1, max2;
 
-    scanf("%d\n",&n);
-    int arr[n];
-
-    for(int i=0;i<n;i++){
-        scanf("%d ",&arr[i]);
+    // 입력:
+	scanf("%d", &n);
+    for (int i = 0; i < n; i++)
+        scanf("%d", &A[i]);
+        
+    // Step 1: 처음 2개의 원소 중 더 큰 값을 max1에
+    //                        더 작은 값을 max2에 넣습니다.
+    if (A[0] > A[1]){
+        max1 = A[0];
+        max2 = A[1];
     }
-
-    int n1=INT_MIN,n2=INT_MIN;
-
-    for(int i=0;i<n;i++){
-        if(arr[i]>=n2){
-            if(arr[i]>n1){
-                n1=arr[i];
-            }
-            else{
-                n2=arr[i];
-            }
+    else{
+        max1 = A[1];
+        max2 = A[0];
+    }
+    
+    // Step 2: 3번째 원소부터 보면서 max1과 max2를 갱신합니다.
+    for (int i = 2; i < n; i++) {
+    	if (A[i] >= max1) {
+            // Case 1: 지금까지 본 숫자들보다 좋다면
+            //         max2, max1 모두 갱신해줍니다.
+            max2 = max1;
+            max1 = A[i];
+    	} 
+        else if (A[i] > max2){
+            // Case 2: max2보다만 좋다면 max2를 갱신합니다.
+            max2 = A[i];
         }
     }
-    printf("%d %d",n1,n2);
+    
+    // 출력:
+    printf("%d %d", max1, max2);
     return 0;
 }
