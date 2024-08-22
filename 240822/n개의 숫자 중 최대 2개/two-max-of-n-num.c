@@ -15,7 +15,7 @@ int main() {
 
     for(int i=0;i<n;i++){
         if(arr[i]>=n2){
-            if(arr[i]>=n1){
+            if(arr[i]>n1){
                 n1=arr[i];
             }
             else{
