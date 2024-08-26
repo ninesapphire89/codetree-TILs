@@ -1,29 +1,30 @@
 #include <stdio.h>
-#define MIN_NUM 1000
 
 int main() {
     // 변수 선언:
     int n;
-    int price[MIN_NUM];
-
-    // 입력:
+    
+    // 입력받기
     scanf("%d", &n);
-    for(int i = 0; i < n; i++)
-        scanf("%d", &price[i]);
-
-    // 배열을 앞에서부터 순회하며 사는 시점의 후보를 선택합니다
-    int min = 10;
-    for(int i = 0; i < n; i++) {
-        // 사는 시점의 다음 해부터 순회하며 파는 시점의 후보를 선택합니다
-        for(int j = i + 1; j < n; j++) {
-			int profit = price[j] - price[i];
-            
-            if(min > profit)
-                min = profit;
+    
+    int numbers[n];
+    
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &numbers[i]);
+    }
+    
+    // 가장 작은 차이 값을 찾기 위해 초기값을 충분히 큰 값으로 설정
+    int min_diff = 100; // 주어진 문제의 제약 조건에 따라 최대 차이는 100을 초과할 수 없음
+    
+    // 인접한 두 숫자 간의 차이 중 최소값을 찾기
+    for (int i = 0; i < n - 1; i++) {
+        int diff = numbers[i + 1] - numbers[i];
+        if (diff < min_diff) {
+            min_diff = diff;
         }
     }
-
-    printf("%d", min);
-	
+    
+    // 결과 출력
+    printf("%d\n", min_diff);
     return 0;
 }
