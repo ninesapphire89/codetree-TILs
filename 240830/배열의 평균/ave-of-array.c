@@ -1,36 +1,38 @@
 #include <stdio.h>
 
 int main() {
-    int arr_[2][4];
-    int sum2=0;
-    double avg3;
-    for(int i=0;i<2;i++){
-        for(int j=0;j<4;j++){
-            scanf("%d ",&arr_[i][j]);
-            sum2+=arr_[i][j];
-        }
-    }
-    avg3=sum2/8;
-    for(int i=0;i<2;i++){
-        int sum=0;
-        double avg;
-        for(int j=0;j<4;j++){
-            sum+=arr_[i][j];
-        }
-        avg=sum/4;
-        printf("%.1lf ",avg);
-    }
-    printf("\n");
-    for(int i=0;i<4;i++){
-        int sum1=0;
-        double avg1;
-        for(int j=0;j<2;j++){
-            sum1+=arr_[j][i];
-        }
-        avg1=sum1/2;
-        printf("%.1lf ",avg1);
-    }
-    printf("\n");
-    printf("%.1lf",avg3);
+    int arr_2d[2][4];
+	int sum;
+	
+	// 각 줄마다 정수를 입력받습니다.
+	for(int i = 0; i < 2; i++)
+		for(int j = 0; j < 4; j++)
+			scanf("%d", &arr_2d[i][j]);
+	
+	// 가로 평균을 출력합니다.
+	for(int i = 0; i < 2; i++) {
+		sum = 0;
+		for(int j = 0; j < 4; j++)
+			sum += arr_2d[i][j];
+		printf("%.1lf ", (double)sum / 4);
+	}
+	printf("\n");
+	
+	// 세로 평균을 출력합니다.
+	for(int j = 0; j < 4; j++) {
+		sum = 0;
+		for(int i = 0; i < 2; i++)
+			sum += arr_2d[i][j];
+		printf("%.1lf ", (double)sum / 2);
+	}
+	printf("\n");
+	
+	// 전체 평균을 출력합니다.
+	sum = 0;
+	for(int i = 0; i < 2; i++) {
+		for(int j = 0; j < 4; j++)
+			sum += arr_2d[i][j];
+	}
+	printf("%.1lf", (double)sum / 8);
     return 0;
 }
