@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    int arr[4][4];
+    int arr[5][5];
     for(int i=0;i<5;i++){
         arr[0][i]=1;
     }
