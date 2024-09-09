@@ -1,22 +1,26 @@
 #include <stdio.h>
 
 int main() {
-    int arr[10][10]={0};
+    int n, m;
+    int grid[10][10] = {0};  // 최대 10x10 크기의 격자, 초기값은 모두 0
 
-    int n,m;
-    scanf("%d %d",&n,&m);
+    // n과 m을 입력 받음
+    scanf("%d %d", &n, &m);
 
-    for(int i=0;i<n;i++){
-        int a,b;
-        scanf("%d %d",&a,&b);
-        arr[a][b] = a*b;
+    // m개의 점을 입력받아 해당하는 위치에 값을 채워넣음
+    for (int i = 0; i < m; i++) {
+        int row, col;
+        scanf("%d %d", &row, &col);
+        grid[row - 1][col - 1] = row * col;  // 행과 열 번호를 1부터 시작하므로 -1로 인덱스 맞춤
     }
 
-    for(int i=1;i<=n;i++){
-        for(int j=1;j<=n;j++){
-            printf("%d ",arr[i][j]);
+    // n x n 격자 출력
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            printf("%d ", grid[i][j]);
         }
         printf("\n");
     }
+
     return 0;
 }
