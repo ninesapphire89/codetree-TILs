@@ -1,26 +1,25 @@
 #include <stdio.h>
 
 int main() {
-    int n, m;
-    int grid[10][10] = {0};  // 최대 10x10 크기의 격자, 초기값은 모두 0
-
-    // n과 m을 입력 받음
-    scanf("%d %d", &n, &m);
-
-    // m개의 점을 입력받아 해당하는 위치에 값을 채워넣음
-    for (int i = 0; i < m; i++) {
-        int row, col;
-        scanf("%d %d", &row, &col);
-        grid[row - 1][col - 1] = row * col;  // 행과 열 번호를 1부터 시작하므로 -1로 인덱스 맞춤
-    }
-
-    // n x n 격자 출력
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < n; j++) {
-            printf("%d ", grid[i][j]);
-        }
-        printf("\n");
-    }
+    int arr[11][11] = {0,};
+	
+	// n, m을 입력받습니다.
+	int n, m;
+	scanf("%d %d", &n, &m);
+	
+	// m회에 걸쳐 점의 위치를 입력받고 올바른 위치에 점의 크기를 표기합니다.
+	for(int i = 0; i < m; i++) {
+		int r, c;
+		scanf("%d %d", &r, &c);
+		arr[r][c] = r * c;
+	}
+			
+	// 채워진 배열을 출력합니다.
+	for(int i = 1; i <= n; i++) {
+		for(int j = 1; j <= n; j++)
+			printf("%d ", arr[i][j]);
+		printf("\n");
+	}
 
     return 0;
 }
