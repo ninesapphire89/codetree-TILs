@@ -15,10 +15,10 @@ int main() {
     int num = 0;
 
     for(int i = 1;i<=n;i++){
+        num+=strlen(arr[i]);
         if(arr[i][0]=='a'){
             a++;
         }
-        num+=strlen(arr[i]);
     }
     printf("%d %d",num,a);
     return 0;
