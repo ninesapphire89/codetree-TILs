@@ -5,6 +5,8 @@ int main() {
 
     for(int i=1;i<=10;i++){
         scanf("%s",str[i]);
+    }
+    for(int i=1;i<=10;i++){
         printf("%s\n",str[i]);
     }
     return 0;
