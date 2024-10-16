@@ -13,7 +13,7 @@ int main() {
 
     int str_index = -1;
 
-    for(int i=0;i<(len-1);i++){
+    for(int i=0;i<=len-1;i++){
         if(str[i]==a){
             str_index = i;
             break;
