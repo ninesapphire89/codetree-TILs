@@ -21,14 +21,14 @@ int main() {
         }
     }
 
-    if(ee = true){
+    if(ee){
         printf("Yes ");
     }
     else{
         printf("No ");
     }
 
-    if(ab = true){
+    if(ab){
         printf("Yes ");
     }
     else{
