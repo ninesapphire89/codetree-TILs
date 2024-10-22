@@ -25,9 +25,8 @@ int main() {
         }
         else{
             char c,d;
-            scanf(" %c",&c);
-            scanf("  %c",&d);
-            for(int j=0;j<len;j++){
+            scanf(" %c %c",&c,&d);
+            for(int j=0;str[j]!='\0';j++){
                 if(str[j]==c){
                     str[j]=d;
                 }
