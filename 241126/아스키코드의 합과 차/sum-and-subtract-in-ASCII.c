@@ -3,23 +3,23 @@
 int main() {
     
     char a,b;
-    
-    scanf("%s",a);
-    scanf("%s",b);
 
-    int a1 = a;
-    int b1 = b;
+    scanf(" %c %c",&a,&b);
 
-    int add = a1+b1;
+    int a_1 = (int)a;
+    int b_1 = (int)b;
+
+    int plus = a_1 + b_1;
     int min;
-    if(a1>b1){
-        min = a1-b1;
+
+    if(a_1>b_1){
+        min = a_1-b_1;
     }
     else{
-        min=b1-a1;
+        min = b_1 - a_1;
     }
 
-    printf("%d %d",add,min);
+    printf("%d %d",plus,min);
 
     return 0;
 }
