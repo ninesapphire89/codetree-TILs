@@ -6,7 +6,7 @@ int main() {
     scanf("%c",&n);
 
     if(n=='a'){
-        printf("a");
+        printf("z");
     }
     else{
         printf("%c",n-1);
