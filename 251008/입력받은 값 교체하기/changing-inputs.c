@@ -4,7 +4,7 @@ int main() {
     
     int a,b;
 
-    scnaf("%d %d",&a,&b);
+    scanf("%d %d",&a,&b);
 
     printf("%d %d",b,a);
 
