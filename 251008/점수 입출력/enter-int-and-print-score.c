@@ -6,7 +6,7 @@ int main() {
 
     scanf("%d",&num);
 
-    printf("Your score is %d point", num);
+    printf("Your score is %d point.", num);
 
     return 0;
 }
