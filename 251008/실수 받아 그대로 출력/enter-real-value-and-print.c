@@ -4,10 +4,10 @@ int main() {
 
     double a;
 
-    scanf("%f",&a);
+    scanf("%lf",&a);
 
+     
 
-
-    printf("%.2f",a);
+    printf("%.2lf",a);
     return 0;
 }
