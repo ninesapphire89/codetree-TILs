@@ -13,7 +13,7 @@ int main() {
         printf("water");
     }
     else{
-        printf("vaper");
+        printf("vapor");
     }
 
     return 0;
