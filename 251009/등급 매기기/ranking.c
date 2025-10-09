@@ -10,7 +10,7 @@ int main() {
         printf("A");
     }
     else if(n>=80){
-        printf("B")
+        printf("B");
     }
     else if(n>=70){
         printf("C");
@@ -19,7 +19,7 @@ int main() {
         printf("D");
     }
     else{
-        printf("F")
+        printf("F");
     }
     return 0;
 }
